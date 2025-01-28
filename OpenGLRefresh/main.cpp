@@ -12,16 +12,21 @@ void processInput(GLFWwindow* window);
 //Shaders------------------------------------------------
 const char* vertexShaderSource = "#version 330 core\n"
 "layout (location = 0) in vec3 aPos;\n"
+"layout (location = 1) in vec3 aColor;\n" 
+
+"out vec3 ourColor;\n"
 "void main()\n"
 "{\n"
 "	gl_Position = vec4(aPos. x, aPos.y, aPos.z, 1.0f);\n"
+"	ourColor = aColor;\n"
 "}\0";
 
 const char* fragmentShaderSource = "#version 330 core\n"
 "out vec4 FragColor;\n"
+"in vec3 ourColor;\n"
 "void main()\n"
 "{\n"
-"	FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
+"	FragColor = vec4(ourColor, 1.0);\n"
 "}\0";
 
 
@@ -122,11 +127,12 @@ int main()
 	// VBO and VAO setup -------------------------------------------------------------------------------------------------------
 
 	float vertices[] = {
-	 0.5f,  0.5f, 0.0f,
-	 0.5f, -0.5f, 0.0f,
-	-0.5f, -0.5f, 0.0f,
-	-0.5f,  0.5f, 0.0f
+	 0.5f,  0.5f, 0.0f, 1.0f, 0.0f, 0.0f,
+	 0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f,
+	-0.5f, -0.5f, 0.0f, 0.0f, 0.0f, 1.0f,
+	-0.5f,  0.5f, 0.0f, 1.0f, 1.0f, 1.0f
 	};
+
 	unsigned int indices[] = {
 		0, 1, 3,
 		1, 2, 3
@@ -152,9 +158,11 @@ int main()
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
 	//telling OpenGL how to interpret the vertex Data
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0); //Needs to be enabled? is deabled by default
-	
+	//color Atribute (in shader location = 1)
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3*sizeof(float)));
+	glEnableVertexAttribArray(1); //Needs to be enabled? is deabled by default
 	
 
 	
@@ -173,10 +181,16 @@ int main()
 		glClear(GL_COLOR_BUFFER_BIT);
 
 
-		//draw first triangle
+		
 		//Every shader and rendering call after glUseProgram will now use this program object
 		glUseProgram(shaderProgram);
-		glBindVertexArray(VAO); //VertexData safed in VBO is indirectly safed in VAO
+
+		//old Code using uniforms:
+		//float timeValue = glfwGetTime();
+		//float greenValue = (sin(timeValue) / 2.0f) + 0.5f;
+		//int vertexColorLocation = glGetUniformLocation(shaderProgram, "Vertexcolor");
+		//glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
+		//glBindVertexArray(VAO); //VertexData safed in VBO is indirectly safed in VAO
 		//glDrawArrays(GL_TRIANGLES, 0, 3);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 		// check and call events and swap buffers
