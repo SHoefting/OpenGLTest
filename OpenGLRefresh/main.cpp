@@ -3,6 +3,8 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
+#include "shader.h"
+
 #include <iostream>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -65,61 +67,65 @@ int main()
 
 	//setup and buid shaderprograms -----------------------------------------------------------------------------------------------------
 
-	int success;
-	char infoLog[512];
 
-	//VertexShader ---------------------------------------------------------------------
-	unsigned int vertexShader;
-	vertexShader = glCreateShader(GL_VERTEX_SHADER);
+	Shader myShader("shaders/shader.vs", "shaders/shader.fs");
+	myShader.use();
 
-	glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
-	glCompileShader(vertexShader);
+	//int success;
+	//char infoLog[512];
 
+	////VertexShader ---------------------------------------------------------------------
+	//unsigned int vertexShader;
+	//vertexShader = glCreateShader(GL_VERTEX_SHADER);
 
-	glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
-
-	if (!success)
-	{
-		glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
-		std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
-	}
-
-	//FragmentShader ---------------------------------------------------------------------------
-	unsigned int fragmentShader;
-	fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-
-	glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
-	glCompileShader(fragmentShader);
-
-	glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
-
-	if (!success)
-	{
-		glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog);
-		std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n" << infoLog << std::endl;
-	}
-
-	// create ShaderProgram and Linking----------------------------------------------------------
-	unsigned int shaderProgram;
-	shaderProgram = glCreateProgram();
-
-	glAttachShader(shaderProgram, vertexShader);
-	glAttachShader(shaderProgram, fragmentShader);
-	glLinkProgram(shaderProgram);
-
-	glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
-
-	if (!success)
-	{
-		glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
-		std::cout << "ERROR::SHADERPROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
-	}
-	
+	//glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
+	//glCompileShader(vertexShader);
 
 
-	//deleting Shaders since we dont need them anymore
-	glDeleteShader(vertexShader);
-	glDeleteShader(fragmentShader);
+	//glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
+
+	//if (!success)
+	//{
+	//	glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
+	//	std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
+	//}
+
+	////FragmentShader ---------------------------------------------------------------------------
+	//unsigned int fragmentShader;
+	//fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+
+	//glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
+	//glCompileShader(fragmentShader);
+
+	//glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
+
+	//if (!success)
+	//{
+	//	glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog);
+	//	std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n" << infoLog << std::endl;
+	//}
+
+	//// create ShaderProgram and Linking----------------------------------------------------------
+	//unsigned int shaderProgram;
+	//shaderProgram = glCreateProgram();
+
+	//glAttachShader(shaderProgram, vertexShader);
+	//glAttachShader(shaderProgram, fragmentShader);
+	//glLinkProgram(shaderProgram);
+
+	//glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
+
+	//if (!success)
+	//{
+	//	glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
+	//	std::cout << "ERROR::SHADERPROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
+	//}
+	//
+
+
+	////deleting Shaders since we dont need them anymore
+	//glDeleteShader(vertexShader);
+	//glDeleteShader(fragmentShader);
 
 
 
@@ -183,7 +189,7 @@ int main()
 
 		
 		//Every shader and rendering call after glUseProgram will now use this program object
-		glUseProgram(shaderProgram);
+		//glUseProgram(shaderProgram);
 
 		//old Code using uniforms:
 		//float timeValue = glfwGetTime();
@@ -201,7 +207,7 @@ int main()
 	glDeleteVertexArrays(1, &VAO);
 	glDeleteBuffers(1, &VBO);
 	glDeleteBuffers(1, &EBO);
-	glDeleteProgram(shaderProgram);
+	glDeleteProgram(myShader.ID);
 
 	glfwTerminate();
 	return 0;

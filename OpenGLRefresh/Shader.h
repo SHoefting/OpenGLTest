@@ -15,7 +15,7 @@ public:
 	unsigned int ID;
 
 	//constructor reads and builds the Shader
-	Shader(const char* vertexPath, const char* fragmentPath) 
+	Shader(const char* vertexPath, const char* fragmentPath)
 	{
 		// 1. retrieve the vertex/fragment source code from file path
 		std::string vertexCode;
@@ -30,7 +30,7 @@ public:
 			//open files
 			vShaderFile.open(vertexPath);
 			fShaderFile.open(fragmentPath);
-			std::stringstream vShaderStream , fShaderStream;
+			std::stringstream vShaderStream, fShaderStream;
 			// read files buffer content into streams
 			vShaderStream << vShaderFile.rdbuf();
 			fShaderStream << fShaderFile.rdbuf();
@@ -90,19 +90,28 @@ public:
 			std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
 		}
 
+		// deleting the shaders since we dont need them anymore
 		glDeleteShader(vertex);
 		glDeleteShader(fragment);
 
-
-		//use/activate the shader 
-		void use() 
-		{
-			glUseProgram(ID);
-		}
-		//utillity uniform functions
-		void setBool(const std::string & name, bool value) const;
-		void setInt(const std::string & name, int value) const;
-		void setFloat(const std::string & name, float value) const;
+	}
+	//use/activate the shader 
+	void use()
+	{
+		glUseProgram(ID);
+	}
+	//utillity uniform functions
+	void setBool(const std::string& name, bool value) const
+	{
+		glUniform1i(glGetUniformLocation(ID, name.c_str()), (int)value);
+	}
+	void setInt(const std::string& name, int value) const
+	{
+		glUniform1i(glGetUniformLocation(ID, name.c_str()), value);
+	}
+	void setFloat(const std::string& name, float value) const
+	{
+		glUniform1f(glGetUniformLocation(ID, name.c_str()), value);
 	}
 };
 
