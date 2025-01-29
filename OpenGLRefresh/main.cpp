@@ -11,27 +11,7 @@
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
 
-
-//Shaders------------------------------------------------
-const char* vertexShaderSource = "#version 330 core\n"
-"layout (location = 0) in vec3 aPos;\n"
-"layout (location = 1) in vec3 aColor;\n" 
-
-"out vec3 ourColor;\n"
-"void main()\n"
-"{\n"
-"	gl_Position = vec4(aPos. x, aPos.y, aPos.z, 1.0f);\n"
-"	ourColor = aColor;\n"
-"}\0";
-
-const char* fragmentShaderSource = "#version 330 core\n"
-"out vec4 FragColor;\n"
-"in vec3 ourColor;\n"
-"void main()\n"
-"{\n"
-"	FragColor = vec4(ourColor, 1.0);\n"
-"}\0";
-
+float mixValue = 0.5f;
 
 int main()
 {
@@ -71,19 +51,25 @@ int main()
 
 	Shader myShader("shaders/shader.vs", "shaders/shader.fs");
 	myShader.use();
+	myShader.setInt("texture1", 0);
+	myShader.setInt("texture2", 1);
+	
+
 
 	// Texture Setup -------------------------------------------------
 
-	unsigned int texture;
-	glGenTextures(1, &texture);
-	glBindTexture(GL_TEXTURE_2D, texture);
+	unsigned int texture1, texture2;
+	glGenTextures(1, &texture1);
+	glBindTexture(GL_TEXTURE_2D, texture1);
+
 	// set texture wrapping/ filtering options
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 	// load and generate the texture
 	int width, height, nrChannels;
+	stbi_set_flip_vertically_on_load(true);
 	unsigned char* data = stbi_load("textures/Text_Brickwall_D_2048x2048.png", &width, &height, &nrChannels, 0);
 	if (data)
 	{
@@ -94,8 +80,30 @@ int main()
 	{
 		std::cout << "Failed to load texture" << std::endl;
 	}
-	
 	stbi_image_free(data);
+
+	// texture 2--------------------------------------------------------------
+	glGenTextures(1, &texture2);
+	glBindTexture(GL_TEXTURE_2D, texture2);
+	// set texture wrapping/ filtering options
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+	data = stbi_load("textures/T_Plant_Wine_D_1024.png", &width, &height, &nrChannels, 0);
+	if (data)
+	{
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+		glGenerateMipmap(GL_TEXTURE_2D);
+	}
+	else
+	{
+		std::cout << "Failed to load texture" << std::endl;
+	}
+	stbi_image_free(data);
+
+
 
 	//int success;
 	//char infoLog[512];
@@ -180,7 +188,11 @@ int main()
 
 	// Binding the Buffer stored in VBO to the GL_ARRAY_BUFFER Target 
 	// all calls on the ARRAY_BUFFER will be used to configure VBO
-	glBindTexture(GL_TEXTURE_2D, texture);
+	glActiveTexture(GL_TEXTURE0);
+	glBindTexture(GL_TEXTURE_2D, texture1);
+	glActiveTexture(GL_TEXTURE1);
+	glBindTexture(GL_TEXTURE_2D, texture2);
+
 	glBindVertexArray(VAO);
 
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
@@ -211,6 +223,9 @@ int main()
 		//rendering:
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
+
+		
+		myShader.setFloat("mixValue", mixValue);
 
 		//float timeValue = glfwGetTime();
 		//float offsetValue = (sin(timeValue) / 2.0f) ;
@@ -248,6 +263,10 @@ void processInput(GLFWwindow* window)
 {
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, true);
+	if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS)
+		mixValue = mixValue + 0.001f;
+	if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS)
+		mixValue = mixValue - 0.001f;
 }
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
