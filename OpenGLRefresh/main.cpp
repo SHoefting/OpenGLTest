@@ -3,6 +3,10 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
 #include "shader.h"
 #include "stb_image.h"
 
@@ -213,6 +217,14 @@ int main()
 	glEnableVertexAttribArray(2);
 	
 
+	//glm::vec4 vec(1.0f, 0.0f, 0.0f, 1.0f);
+	
+	//trans = glm::translate(trans, glm::vec3(1.0f, 1.0f, 0.0f));
+	
+
+
+
+
 
 	// render loop ----------------------------------------------------------------------------------------
 	while (!glfwWindowShouldClose(window))
@@ -224,6 +236,12 @@ int main()
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
+		glm::mat4 trans = glm::mat4(1.0f);
+		trans = glm::translate(trans, glm::vec3(0.5f, -0.5f, 0.0f));
+		trans = glm::rotate(trans, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
+		//trans = glm::scale(trans, glm::vec3(0.5, 0.5, 0.5));
+		unsigned int transformLoc = glGetUniformLocation(myShader.ID, "transform");
+		glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans));
 		
 		myShader.setFloat("mixValue", mixValue);
 

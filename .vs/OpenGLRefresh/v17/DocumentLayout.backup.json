@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\SHoef\\source\\repos\\OpenGLRefresh\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{588F51AF-7467-4CD5-A138-66553058E97B}|OpenGLRefresh\\OpenGLRefresh.vcxproj|C:\\Users\\SHoef\\source\\repos\\OpenGLRefresh\\OpenGLRefresh\\shaders\\shader.fs||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{588F51AF-7467-4CD5-A138-66553058E97B}|OpenGLRefresh\\OpenGLRefresh.vcxproj|solutionrelative:OpenGLRefresh\\shaders\\shader.fs||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{588F51AF-7467-4CD5-A138-66553058E97B}|OpenGLRefresh\\OpenGLRefresh.vcxproj|C:\\Users\\SHoef\\source\\repos\\OpenGLRefresh\\OpenGLRefresh\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{588F51AF-7467-4CD5-A138-66553058E97B}|OpenGLRefresh\\OpenGLRefresh.vcxproj|solutionrelative:OpenGLRefresh\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{588F51AF-7467-4CD5-A138-66553058E97B}|OpenGLRefresh\\OpenGLRefresh.vcxproj|C:\\Users\\SHoef\\source\\repos\\OpenGLRefresh\\OpenGLRefresh\\shaders\\shader.vs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{588F51AF-7467-4CD5-A138-66553058E97B}|OpenGLRefresh\\OpenGLRefresh.vcxproj|solutionrelative:OpenGLRefresh\\shaders\\shader.vs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{588F51AF-7467-4CD5-A138-66553058E97B}|OpenGLRefresh\\OpenGLRefresh.vcxproj|C:\\Users\\SHoef\\source\\repos\\OpenGLRefresh\\OpenGLRefresh\\shaders\\shader.fs||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{588F51AF-7467-4CD5-A138-66553058E97B}|OpenGLRefresh\\OpenGLRefresh.vcxproj|solutionrelative:OpenGLRefresh\\shaders\\shader.fs||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{588F51AF-7467-4CD5-A138-66553058E97B}|OpenGLRefresh\\OpenGLRefresh.vcxproj|C:\\Users\\SHoef\\source\\repos\\OpenGLRefresh\\OpenGLRefresh\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -26,24 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "shader.fs",
-              "DocumentMoniker": "C:\\Users\\SHoef\\source\\repos\\OpenGLRefresh\\OpenGLRefresh\\shaders\\shader.fs",
-              "RelativeDocumentMoniker": "OpenGLRefresh\\shaders\\shader.fs",
-              "ToolTip": "C:\\Users\\SHoef\\source\\repos\\OpenGLRefresh\\OpenGLRefresh\\shaders\\shader.fs",
-              "RelativeToolTip": "OpenGLRefresh\\shaders\\shader.fs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "shader.vs",
+              "DocumentMoniker": "C:\\Users\\SHoef\\source\\repos\\OpenGLRefresh\\OpenGLRefresh\\shaders\\shader.vs",
+              "RelativeDocumentMoniker": "OpenGLRefresh\\shaders\\shader.vs",
+              "ToolTip": "C:\\Users\\SHoef\\source\\repos\\OpenGLRefresh\\OpenGLRefresh\\shaders\\shader.vs",
+              "RelativeToolTip": "OpenGLRefresh\\shaders\\shader.vs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-29T21:04:14.765Z",
+              "WhenOpened": "2025-01-30T20:57:58.571Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "stb_image.cpp",
               "DocumentMoniker": "C:\\Users\\SHoef\\source\\repos\\OpenGLRefresh\\OpenGLRefresh\\stb_image.cpp",
               "RelativeDocumentMoniker": "OpenGLRefresh\\stb_image.cpp",
@@ -55,7 +59,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "shader.h",
               "DocumentMoniker": "C:\\Users\\SHoef\\source\\repos\\OpenGLRefresh\\OpenGLRefresh\\shader.h",
               "RelativeDocumentMoniker": "OpenGLRefresh\\shader.h",
@@ -68,15 +72,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\SHoef\\source\\repos\\OpenGLRefresh\\OpenGLRefresh\\main.cpp",
               "RelativeDocumentMoniker": "OpenGLRefresh\\main.cpp",
               "ToolTip": "C:\\Users\\SHoef\\source\\repos\\OpenGLRefresh\\OpenGLRefresh\\main.cpp",
               "RelativeToolTip": "OpenGLRefresh\\main.cpp",
-              "ViewState": "AgIAAOQAAAAAAAAAAAAAAAoBAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAANgAAAAAAAAAAAAAAPAAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-27T11:38:31.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "shader.fs",
+              "DocumentMoniker": "C:\\Users\\SHoef\\source\\repos\\OpenGLRefresh\\OpenGLRefresh\\shaders\\shader.fs",
+              "RelativeDocumentMoniker": "OpenGLRefresh\\shaders\\shader.fs",
+              "ToolTip": "C:\\Users\\SHoef\\source\\repos\\OpenGLRefresh\\OpenGLRefresh\\shaders\\shader.fs",
+              "RelativeToolTip": "OpenGLRefresh\\shaders\\shader.fs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-01-29T21:04:14.765Z",
               "EditorCaption": ""
             }
           ]
