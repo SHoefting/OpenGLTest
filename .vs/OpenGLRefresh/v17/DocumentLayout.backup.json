@@ -37,20 +37,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "matrix_transform.inl",
-              "DocumentMoniker": "C:\\Users\\SHoef\\Documents\\OpenGLLibs\\Include\\glm\\ext\\matrix_transform.inl",
-              "RelativeDocumentMoniker": "..\\..\\..\\Documents\\OpenGLLibs\\Include\\glm\\ext\\matrix_transform.inl",
-              "ToolTip": "C:\\Users\\SHoef\\Documents\\OpenGLLibs\\Include\\glm\\ext\\matrix_transform.inl",
-              "RelativeToolTip": "..\\..\\..\\Documents\\OpenGLLibs\\Include\\glm\\ext\\matrix_transform.inl",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-01-31T23:03:40.74Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 4,
@@ -71,7 +59,7 @@
               "RelativeDocumentMoniker": "OpenGLRefresh\\shader.h",
               "ToolTip": "C:\\Users\\SHoef\\source\\repos\\OpenGLRefresh\\OpenGLRefresh\\shader.h",
               "RelativeToolTip": "OpenGLRefresh\\shader.h",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAAAHMAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAHMAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-28T20:11:09.425Z"
             },
@@ -83,10 +71,22 @@
               "RelativeDocumentMoniker": "OpenGLRefresh\\main.cpp",
               "ToolTip": "C:\\Users\\SHoef\\source\\repos\\OpenGLRefresh\\OpenGLRefresh\\main.cpp",
               "RelativeToolTip": "OpenGLRefresh\\main.cpp",
-              "ViewState": "AgIAAOoAAAAAAAAAAAAAADMBAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAACkBAAAAAAAAAAAtwEkBAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-27T11:38:31.771Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "matrix_transform.inl",
+              "DocumentMoniker": "C:\\Users\\SHoef\\Documents\\OpenGLLibs\\Include\\glm\\ext\\matrix_transform.inl",
+              "RelativeDocumentMoniker": "..\\..\\..\\Documents\\OpenGLLibs\\Include\\glm\\ext\\matrix_transform.inl",
+              "ToolTip": "C:\\Users\\SHoef\\Documents\\OpenGLLibs\\Include\\glm\\ext\\matrix_transform.inl",
+              "RelativeToolTip": "..\\..\\..\\Documents\\OpenGLLibs\\Include\\glm\\ext\\matrix_transform.inl",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-01-31T23:03:40.74Z"
             },
             {
               "$type": "Document",
@@ -96,7 +96,7 @@
               "RelativeDocumentMoniker": "OpenGLRefresh\\shaders\\shader.vs",
               "ToolTip": "C:\\Users\\SHoef\\source\\repos\\OpenGLRefresh\\OpenGLRefresh\\shaders\\shader.vs",
               "RelativeToolTip": "OpenGLRefresh\\shaders\\shader.vs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-01-30T20:57:58.571Z"
             },
