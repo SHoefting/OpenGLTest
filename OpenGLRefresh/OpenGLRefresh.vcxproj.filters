@@ -37,6 +37,6 @@
     <None Include="shaders\shader.fs" />
     <None Include="shaders\shader.vs" />
     <None Include=".gitignore" />
-    <None Include="lightShader.fs" />
+    <None Include="shaders\lightShader.fs" />
   </ItemGroup>
 </Project>

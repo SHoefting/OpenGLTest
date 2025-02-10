@@ -96,47 +96,47 @@ int main()
 
 
 	float vertices[] = {
-	-0.5f, -0.5f, -0.5f,  
-	 0.5f, -0.5f, -0.5f,  
-	 0.5f,  0.5f, -0.5f,  
-	 0.5f,  0.5f, -0.5f,  
-	 -0.5f, 0.5f, -0.5f,  
-	-0.5f, -0.5f, -0.5f,  
+		-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+		 0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+		 0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+		 0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+		-0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+		-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
 
-	-0.5f, -0.5f,  0.5f,  
-	 0.5f, -0.5f,  0.5f,  
-	 0.5f,  0.5f,  0.5f,  
-	 0.5f,  0.5f,  0.5f,  
-	-0.5f,  0.5f,  0.5f,  
-	-0.5f, -0.5f,  0.5f,  
+		-0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+		 0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+		 0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+		 0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+		-0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+		-0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
 
-	-0.5f,  0.5f,  0.5f,  
-	-0.5f,  0.5f, -0.5f,  
-	-0.5f, -0.5f, -0.5f,  
-	-0.5f, -0.5f, -0.5f,  
-	-0.5f, -0.5f,  0.5f,  
-	-0.5f,  0.5f,  0.5f,  
+		-0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+		-0.5f,  0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+		-0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+		-0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+		-0.5f, -0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+		-0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
 
-	 0.5f,  0.5f,  0.5f,  
-	 0.5f,  0.5f, -0.5f,  
-	 0.5f, -0.5f, -0.5f,  
-	 0.5f, -0.5f, -0.5f,  
-	 0.5f, -0.5f,  0.5f,  
-	 0.5f,  0.5f,  0.5f,  
+		 0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
+		 0.5f,  0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+		 0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+		 0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+		 0.5f, -0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
+		 0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
 
-	-0.5f, -0.5f, -0.5f,  
-	 0.5f, -0.5f, -0.5f,  
-	 0.5f, -0.5f,  0.5f,  
-	 0.5f, -0.5f,  0.5f,  
-	-0.5f, -0.5f,  0.5f,  
-	-0.5f, -0.5f, -0.5f,  
+		-0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
+		 0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
+		 0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+		 0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+		-0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+		-0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
 
-	-0.5f,  0.5f, -0.5f,  
-	 0.5f,  0.5f, -0.5f,  
-	 0.5f,  0.5f,  0.5f,  
-	 0.5f,  0.5f,  0.5f,  
-	-0.5f,  0.5f,  0.5f,  
-	-0.5f,  0.5f, -0.5f  
+		-0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,
+		 0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,
+		 0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+		 0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+		-0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+		-0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f
 	};
 
 	unsigned int indices[] = {
@@ -144,18 +144,6 @@ int main()
 		1, 2, 3
 	};
 
-	//glm::vec3 cubePositions[] = {
-	//	glm::vec3(0.0f, 0.0f, 0.0f),
-	//	glm::vec3(2.0f, 5.0f, -15.0f),
-	//	glm::vec3(-1.5f, -2.2f, -2.5f),
-	//	glm::vec3(-3.8f, -2.0f, -12.3f),
-	//	glm::vec3(2.4f, -0.4f, -3.5f),
-	//	glm::vec3(-1.7f, 3.0f, -7.5f),
-	//	glm::vec3(1.3f, -2.0f, -2.5f),
-	//	glm::vec3(1.5f, 2.0f, 2.5f),
-	//	glm::vec3(1.5f, 0.2f, -1.5f),
-	//	glm::vec3(-1.3f, 1.0f, 1.5f)
-	//};
 	
 	unsigned int VBO, VAO, EBO;
 	
@@ -165,12 +153,7 @@ int main()
 	glGenBuffers(1, &VBO);
 	glGenBuffers(1, &EBO);
 
-	//// Binding the Buffer stored in VBO to the GL_ARRAY_BUFFER Target 
-	//// all calls on the ARRAY_BUFFER will be used to configure VBO
-	//glActiveTexture(GL_TEXTURE0);
-	//glBindTexture(GL_TEXTURE_2D, texture1);
-	//glActiveTexture(GL_TEXTURE1);
-	//glBindTexture(GL_TEXTURE_2D, texture2);
+
 
 	glBindVertexArray(VAO);
 
@@ -178,33 +161,25 @@ int main()
 	//specifies the Bufffertype, the size of the data, a reference to the data and how to draw it
 	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
-	//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-	//glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+
 
 	//telling OpenGL how to interpret the vertex Data
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0); //Needs to be enabled? is deabled by default
-	//color Atribute (in shader location = 1)
-	//glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3*sizeof(float)));
-	//glEnableVertexAttribArray(1); //Needs to be enabled? is deabled by default
-	//
-	//glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
-	//glEnableVertexAttribArray(2);
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+	glEnableVertexAttribArray(1);
+
 
 	unsigned int lightVAO;
 	glGenVertexArrays(1, &lightVAO);
 	glBindVertexArray(lightVAO);
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
-	
-	glEnable(GL_DEPTH_TEST);
-	//glm::vec4 vec(1.0f, 0.0f, 0.0f, 1.0f);
-	
-	//trans = glm::translate(trans, glm::vec3(1.0f, 1.0f, 0.0f));
-	
 
-	
+
+	glEnable(GL_DEPTH_TEST);
+
 
 
 
@@ -220,12 +195,13 @@ int main()
 		processInput(window);
 
 		//rendering:
-		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		myShader.use();
 		myShader.setVec3("objectColor", 1.0f, 0.5f, 0.31f);
-		myShader.setVec3("lightColor", 0.0f, 1.0f, 1.0f);
+		myShader.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
+		myShader.setVec3("lightPos", lightPos);
 
 		// view/projection transformations
 		glm::mat4 projection =	glm::perspective(glm::radians(fov), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
@@ -238,7 +214,6 @@ int main()
 		myShader.setMat4("model", model);
 
 		// setting value for Blending
-		/*myShader.setFloat("mixValue", mixValue);*/
 		glBindVertexArray(VAO);
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 
@@ -255,19 +230,7 @@ int main()
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 
-		//for (unsigned int i = 0; i < 10; i++)
-		//{
 
-		//	glm::mat4 model = glm::mat4(1.0f);
-		//	model = glm::translate(model, cubePositions[i]);
-		//	float angle = 45.0f;
-		//	model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.0f, 0.0f));
-		//	angle = 2.0f * glfwGetTime() *i;
-		//	model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.0f, 0.0f));
-		//	
-		//	myShader.setMat4("model", model);
-		//	glDrawArrays(GL_TRIANGLES, 0, 36);
-		//};
 		
 
 		// check and call events and swap buffers
