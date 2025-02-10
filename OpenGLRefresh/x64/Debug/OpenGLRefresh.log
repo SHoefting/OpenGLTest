@@ -1,10 +1,9 @@
 ﻿  main.cpp
-C:\Users\SHoef\source\repos\OpenGLRefresh\OpenGLRefresh\main.cpp(264,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\SHoef\source\repos\OpenGLRefresh\OpenGLRefresh\main.cpp(295,33): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\SHoef\source\repos\OpenGLRefresh\OpenGLRefresh\main.cpp(348,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\SHoef\source\repos\OpenGLRefresh\OpenGLRefresh\main.cpp(349,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\SHoef\source\repos\OpenGLRefresh\OpenGLRefresh\main.cpp(353,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\SHoef\source\repos\OpenGLRefresh\OpenGLRefresh\main.cpp(354,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\SHoef\source\repos\OpenGLRefresh\OpenGLRefresh\main.cpp(355,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\SHoef\source\repos\OpenGLRefresh\OpenGLRefresh\main.cpp(356,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\SHoef\source\repos\OpenGLRefresh\OpenGLRefresh\main.cpp(215,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\SHoef\source\repos\OpenGLRefresh\OpenGLRefresh\main.cpp(320,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\SHoef\source\repos\OpenGLRefresh\OpenGLRefresh\main.cpp(321,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\SHoef\source\repos\OpenGLRefresh\OpenGLRefresh\main.cpp(325,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\SHoef\source\repos\OpenGLRefresh\OpenGLRefresh\main.cpp(326,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\SHoef\source\repos\OpenGLRefresh\OpenGLRefresh\main.cpp(327,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\SHoef\source\repos\OpenGLRefresh\OpenGLRefresh\main.cpp(328,10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   OpenGLRefresh.vcxproj -> C:\Users\SHoef\source\repos\OpenGLRefresh\x64\Debug\OpenGLRefresh.exe
