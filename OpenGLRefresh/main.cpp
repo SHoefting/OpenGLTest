@@ -202,6 +202,7 @@ int main()
 		myShader.setVec3("objectColor", 1.0f, 0.5f, 0.31f);
 		myShader.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
 		myShader.setVec3("lightPos", lightPos);
+		myShader.setVec3("viewPos", cameraPos);
 
 		// view/projection transformations
 		glm::mat4 projection =	glm::perspective(glm::radians(fov), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
@@ -218,6 +219,7 @@ int main()
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		lightShader.use();
+		lightPos = glm::vec3(sin(currentFrame) * 3, 1 , cos(currentFrame) * 3);
 		model = glm::mat4(1.0f);
 		model = glm::translate(model, lightPos);
 		model = glm::scale(model, glm::vec3(0.2f));
@@ -260,9 +262,9 @@ void processInput(GLFWwindow* window)
 
 	const float cameraSpeed = 2.5f * deltaTime; // adjust accordingly
 	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-		cameraPos += cameraSpeed * glm::normalize(glm::vec3(cameraFront.x,0.0f ,cameraFront.z));
+		cameraPos += cameraSpeed * glm::normalize(cameraFront);
 	if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-		cameraPos -= cameraSpeed * glm::normalize(glm::vec3(cameraFront.x, 0.0f, cameraFront.z));
+		cameraPos -= cameraSpeed * glm::normalize(cameraFront);
 	if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
 		cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
 	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
